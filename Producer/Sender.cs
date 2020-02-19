@@ -6,6 +6,15 @@ namespace Producer
 {
     class Sender
     {
+        // creates an image with port 8080 connected to the ui and port 5672 connected to rabbitmq
+        //docker run -d --hostname my-rabbit --name some-rabbit -p 8080:15672 -p 5672:5672 rabbitmq:3-management
+
+        //gui located at
+        //http://localhost:8080
+
+        //user/password of guest / guest
+
+
         public static void Main(string[] args)
         {
             var factory = new ConnectionFactory() { HostName = "localhost", Port = 5672 };
